@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    <!-- Minified JS file -->
+    <script src="assets/js/script.js" defer></script>
     <!-- Minified CSS file -->
     <link rel="stylesheet" href="assets/css/main.min.css">
     <title>Les Sables d'Olonne | Infos, tourisme, hébergements</title>
@@ -189,63 +191,135 @@
                     </div>
                     <div id="hotel-hours" class="block-content">
                         <h2>Horaires</h2>
-                        <div class="table-list">
-                            <div class="table-item">
-                                <div class="table-left">
-                                    <p>Lundi</p>
-                                </div>
-                                <div class="table-right">
-                                    <p>Ouvert de 09:00 à 21:00</p>
-                                </div>
+                        <div class="tabs-container">
+                            <div class="tabs-header">
+                                <ul class="nav-links">
+                                    <li class="nav-item tab-active tab" data-tab-target="#tab-1">Du 08/12/2023 au 19/12/2023</li>
+                                    <li class="nav-item" data-tab-target="#tab-2">Du 20/12/2023 au 29/12/2023</li>
+                                </ul>
                             </div>
-                            <div class="table-item">
-                                <div class="table-left">
-                                    <p>Mardi</p>
+                            <div class="tab-content">
+                                <div id="tab-1" data-tab-content class="tab-active">
+                                    <div class="table-list">
+                                        <div class="table-item">
+                                            <div class="table-left">
+                                                <p>Lundi</p>
+                                            </div>
+                                            <div class="table-right">
+                                                <p>Ouvert de 09:00 à 21:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="table-item">
+                                            <div class="table-left">
+                                                <p>Mardi</p>
+                                            </div>
+                                            <div class="table-right">
+                                                <p>Ouvert de 09:00 à 21:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="table-item">
+                                            <div class="table-left">
+                                                <p>Mercredi</p>
+                                            </div>
+                                            <div class="table-right">
+                                                <p>Ouvert de 09:00 à 21:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="table-item">
+                                            <div class="table-left">
+                                                <p>Jeudi</p>
+                                            </div>
+                                            <div class="table-right">
+                                                <p>Ouvert de 09:00 à 21:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="table-item">
+                                            <div class="table-left">
+                                                <p>Vendredi</p>
+                                            </div>
+                                            <div class="table-right">
+                                                <p>Ouvert de 09:00 à 21:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="table-item">
+                                            <div class="table-left">
+                                                <p>Samedi</p>
+                                            </div>
+                                            <div class="table-right">
+                                                <p>Ouvert de 09:00 à 12:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="table-item">
+                                            <div class="table-left">
+                                                <p>Dimanche</p>
+                                            </div>
+                                            <div class="table-right">
+                                                <p>Fermé</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="table-right">
-                                    <p>Ouvert de 09:00 à 21:00</p>
+                                <div id="tab-2" data-tab-content>
+                                    <div class="table-list">
+                                        <div class="table-item">
+                                            <div class="table-left">
+                                                <p>Lundi</p>
+                                            </div>
+                                            <div class="table-right">
+                                                <p>Fermé</p>
+                                            </div>
+                                        </div>
+                                        <div class="table-item">
+                                            <div class="table-left">
+                                                <p>Mardi</p>
+                                            </div>
+                                            <div class="table-right">
+                                                <p>Fermé</p>
+                                            </div>
+                                        </div>
+                                        <div class="table-item">
+                                            <div class="table-left">
+                                                <p>Mercredi</p>
+                                            </div>
+                                            <div class="table-right">
+                                                <p>Fermé</p>
+                                            </div>
+                                        </div>
+                                        <div class="table-item">
+                                            <div class="table-left">
+                                                <p>Jeudi</p>
+                                            </div>
+                                            <div class="table-right">
+                                                <p>Fermé</p>
+                                            </div>
+                                        </div>
+                                        <div class="table-item">
+                                            <div class="table-left">
+                                                <p>Vendredi</p>
+                                            </div>
+                                            <div class="table-right">
+                                                <p>Ouvert de 09:00 à 21:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="table-item">
+                                            <div class="table-left">
+                                                <p>Samedi</p>
+                                            </div>
+                                            <div class="table-right">
+                                                <p>Ouvert de 09:00 à 12:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="table-item">
+                                            <div class="table-left">
+                                                <p>Dimanche</p>
+                                            </div>
+                                            <div class="table-right">
+                                                <p>Fermé</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="table-item">
-                                <div class="table-left">
-                                    <p>Mercredi</p>
-                                </div>
-                                <div class="table-right">
-                                    <p>Ouvert de 09:00 à 21:00</p>
-                                </div>
-                            </div>
-                            <div class="table-item">
-                                <div class="table-left">
-                                    <p>Jeudi</p>
-                                </div>
-                                <div class="table-right">
-                                    <p>Ouvert de 09:00 à 21:00</p>
-                                </div>
-                            </div>
-                            <div class="table-item">
-                                <div class="table-left">
-                                    <p>Vendredi</p>
-                                </div>
-                                <div class="table-right">
-                                    <p>Ouvert de 09:00 à 21:00</p>
-                                </div>
-                            </div>
-                            <div class="table-item">
-                                <div class="table-left">
-                                    <p>Samedi</p>
-                                </div>
-                                <div class="table-right">
-                                    <p>Ouvert de 09:00 à 12:00</p>
-                                </div>
-                            </div>
-                            <div class="table-item">
-                                <div class="table-left">
-                                    <p>Dimanche</p>
-                                </div>
-                                <div class="table-right">
-                                    <p>Fermé</p>
-                                </div>
-                            </div>
+                              </div>
                         </div>
                     </div>
                     <div id="hotel-more-links" class="block-content">
