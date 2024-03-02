@@ -35,9 +35,10 @@
         @include reset-btn;
         color:$primary-color;
         font-size: 1.3rem;
-        transition: 250ms ease-out color;
+        transition: 200ms ease-out all;
         &:hover{
             color:$primary-color;
+            transform:scale(1.2);
         }
     }
 }

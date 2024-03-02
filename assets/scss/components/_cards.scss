@@ -1,17 +1,30 @@
 .card{
-    a{
-        @include reset-link;
-        @include flex-container("row", "flex-start", "center", 1.3rem);
-    }
     margin-bottom: 1.25rem;
 
+    a{
+        @include reset-link;
+        @include flex-container("row", "flex-start", "center", "wrap", 1.25rem);
+    }
+
     .tags-list{
-        margin: 8px 0;
+        margin: 3px 0 8px 0;
     }
 
     h3{
-        margin-top: 0;
-        margin-bottom: 8px;
+        margin:0;
+    }
+
+    &-content{
+        flex:1;
+    }
+
+    &-cta{
+        span{
+            color:$dark-color;
+            &:hover{
+                color:$primary-color;
+            }
+        }
     }
 
     &-img{
