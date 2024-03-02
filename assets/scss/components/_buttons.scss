@@ -1,0 +1,43 @@
+.btn{
+    display: inline-block;
+    padding: 1rem 3.8rem;
+    border:2px solid transparent;
+    background-color: transparent;
+    transition: 250ms background ease-in-out;
+    border-radius: 2rem;
+    font-weight: $font-medium;
+    text-decoration: none;
+
+    &-primary{
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $white;
+        &:hover{
+            background-color: transparent;
+            color: $dark-color;
+        }
+    }
+    &-outline{
+        border-color: $primary-color;
+        color: $dark-color;
+        &:hover{
+            background-color: $primary-color;
+            color: $white;
+        }
+        &-dark{
+            color:$white;
+        }
+    }
+    &-menu{
+        background-color: $secondary-color;
+    }
+    &-icon{
+        @include reset-btn;
+        color:$primary-color;
+        font-size: 1.3rem;
+        transition: 250ms ease-out color;
+        &:hover{
+            color:$primary-color;
+        }
+    }
+}

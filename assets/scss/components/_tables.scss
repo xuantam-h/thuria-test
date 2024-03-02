@@ -1,0 +1,20 @@
+.table{
+    &-list{
+        margin-top:1.8rem;
+    }
+    &-item{
+        @include flex-container("row", "space-between", "center");
+        padding:1.875rem 0;
+        border-bottom: 2px solid $gray-border;
+        p{
+            margin: 0;
+            font-weight: $font-bold;
+            line-height: 1.2;
+            font-size:.9rem;
+        }
+        .subtitle{
+            font-weight: $font-regular;
+            font-size:.8rem;
+        }
+    }
+}

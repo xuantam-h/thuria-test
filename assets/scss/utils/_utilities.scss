@@ -1,0 +1,66 @@
+.text-left{
+    text-align: left;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-white{
+    color: $white;
+}
+
+.text-italic{
+    font-style: italic;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.flex-nowrap{
+    flex-wrap: nowrap;
+}
+
+.gap-xs{
+    gap:.625rem;
+}
+
+.gap-sm{
+    gap:1rem;
+}
+
+.gap-md{
+    gap: 1.875rem;
+}
+
+.lead{
+    font-size:1.1rem;
+}
+
+.subtitle{
+
+}
+
+.underline-link{
+    text-decoration: underline;
+    &:hover{
+        text-decoration: none;
+    }
+}

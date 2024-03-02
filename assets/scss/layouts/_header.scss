@@ -1,0 +1,30 @@
+#main-header{
+    background-color: $dark-color;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    .nav-links{
+        .nav-item{
+            &:hover{
+                color:$white;
+            }
+        }
+
+        .nav-active{
+            color:$white;
+        }
+    }
+}
+
+.nav-widgets{
+    @include flex-container("row", "flex-start", "center", "wrap", 1.875rem);
+    button{
+        color:$white;
+        &:hover{
+            color:$primary-color;
+        }
+    }
+}
+

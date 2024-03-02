@@ -1,0 +1,24 @@
+.alert{
+    &-box{
+        @include flex-container("row","flex-start","flex-start");
+        gap:1.25rem;
+        margin-bottom:1.875rem;
+    }
+    &-icon{
+        background-color: $tertiary-color;
+        padding: 1rem;
+
+        > span{
+            display: block;
+            &:before{
+                color:$secondary-color;
+                font-size: $icon-size;
+            }
+        }
+    }
+    &-content{
+        p{
+            margin: 0.3rem 0 0 0;
+        }
+    }
+}

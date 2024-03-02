@@ -1,0 +1,26 @@
+.card{
+    a{
+        @include reset-link;
+        @include flex-container("row", "flex-start", "center", 1.3rem);
+    }
+    margin-bottom: 1.25rem;
+
+    .tags-list{
+        margin: 8px 0;
+    }
+
+    h3{
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    &-img{
+        width: 8.75rem;
+        height: 8.75rem;
+        img{
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

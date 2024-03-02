@@ -1,0 +1,23 @@
+.nav{
+    &-links{
+        display: flex;
+        gap:1.25rem;
+    }
+    &-item{
+        font-size: .9rem;
+        color:$inactive-color;
+        text-decoration: none;
+        font-weight: $font-medium;
+        border-bottom: 5px solid transparent;
+        padding-top:1.875rem;
+        padding-bottom:1.875rem;
+        transition: 250ms ease-out all;
+        &:hover{
+            color:$dark-color;
+        }
+    }
+    &-active{
+        color:$dark-color;
+        border-color: $primary-color;
+    }
+}
