@@ -1,9 +1,7 @@
 .tags{
     &-list{
-        display: flex;
+        @include flex-container("row", "flex-start", "center", "wrap", .6rem);
         padding: 0;
-        gap: .6rem;
-        flex-wrap: wrap;
         font-weight: $font-medium;
         list-style: none;
     }

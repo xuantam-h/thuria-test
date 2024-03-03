@@ -1,0 +1,30 @@
+#activities-around{
+    .splide__list{/*
+        li{
+            &:first-of-type{
+                transform: rotate(-2deg);
+            }
+            &:last-of-type{
+                transform: rotate(2deg);
+            }
+        }*/
+    }
+    .splide__arrow{
+        width:auto;
+        height:auto;
+        background-color: $white;
+        border:2px solid $primary-color;
+        padding:1rem;
+        font-size:1.5rem;
+        color: $dark-color;
+    }
+    .splide__arrow--prev{
+        left: -1em;
+        span{
+            transform:rotate(180deg);
+        }
+    }
+    .splide__arrow--next{
+        right:-1em;
+    }
+}

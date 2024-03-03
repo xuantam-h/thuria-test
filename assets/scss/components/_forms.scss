@@ -1,0 +1,37 @@
+form.newsletter-form{
+    @include flex-container("column", "center", "center", "nowrap", 0);
+    background-color: $white;
+    padding: 3.125rem 2.5rem;
+    box-shadow: 0px 25px 80px rgba(0, 0, 0, 0.15);
+
+    @include mobile{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    label{
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    input{
+        background-color: transparent;
+        border: none;
+        font-size: 1.3rem;
+        font-family: $font-family;
+        color: $dark-color;
+        text-align: center;
+        margin-bottom: 1.5rem;
+
+        @include mobile{
+            font-size: 1.7rem;
+            text-align: left;
+            margin-bottom: 0;
+        }
+    }
+}

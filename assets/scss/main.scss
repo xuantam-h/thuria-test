@@ -9,6 +9,7 @@
 @import "components/alerts";
 @import "components/buttons";
 @import "components/cards";
+@import "components/forms";
 @import "components/navbar";
 @import "components/tables";
 @import "components/tabs";
@@ -17,5 +18,7 @@
 @import "layouts/container";
 @import "layouts/footer";
 @import "layouts/header";
+
+@import "libs/splide";
 
 @import "pages/home";

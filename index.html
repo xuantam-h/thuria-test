@@ -331,7 +331,7 @@
                                 </div>
                                 <div class="card-content">
                                     <div class="d-flex justify-between align-center gap">
-                                        <h3>Les meilleurs spots & activité pour le riders</h3>
+                                        <h3 class="card-title">Les meilleurs spots & activité pour le riders</h3>
                                         <div class="card-cta">
                                             <button class="btn-icon">
                                                 <span class="icon-heart-o"></span>
@@ -355,7 +355,7 @@
                                 </div>
                                 <div class="card-content">
                                     <div class="d-flex justify-between align-center gap">
-                                        <h3>Louer un voilier avec ou sans skipper pour une sortie en mer</h3>
+                                        <h3 class="card-title">Louer un voilier avec ou sans skipper pour une sortie en mer</h3>
                                         <div class="card-cta">
                                             <button class="btn-icon">
                                                 <span class="icon-heart-o"></span>
@@ -381,49 +381,86 @@
         </section>
         <section id="activities-around" class="block-content container">
             <h2 class="lead-title">Activités proches</h2>
-            <section class="splide" aria-label="Carousel des activités proches">
+            <section class="splide slider" aria-label="Carousel des activités proches">
+                <!-- Custom slider arrows -->
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <span class="icon-arrow_forward"></span>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <span class="icon-arrow_forward"></span>
+                    </button>
+                </div>
+                <!-- Slides list -->
                 <div class="splide__track">
                       <ul class="splide__list">
                           <li class="splide__slide">
                             <article class="card card-lg">
-                                <div class="card-img">
-                                    <img src="assets/img/slide-card-1.jpg" alt="Placeholder image" loading="lazy">
-                                </div>
-                                <ul class="tags-list">
-                                    <li class="tags-item tags-primary">Sport nautique</li>
-                                </ul>
-                                <div class="card-overlay">
-                                    <h3>Faire son baptême de voile, ou se perfectionner lors d'un stage</h3>
-                                    <div class="d-flex justify-between align-center">
-                                        <button class="btn-icon">
-                                            <span class="icon-heart-o"></span>
-                                        </button>
-                                        <button class="btn-icon">
-                                            <span class="icon-dots-three-horizontal"></span>
-                                        </button>
+                                <a href="#">
+                                    <div class="card-img">
+                                        <img src="assets/img/slide-card-1.jpg" alt="Placeholder image" loading="lazy">
                                     </div>
-                                </div>
+                                    <ul class="tags-list">
+                                        <li class="tags-item tags-primary">Sport nautique</li>
+                                    </ul>
+                                    <div class="card-overlay">
+                                        <h3 class="card-title">Faire son baptême de voile, ou se perfectionner lors d'un stage</h3>
+                                        <div class="d-flex justify-between align-center">
+                                            <button class="btn-icon">
+                                                <span class="icon-heart-o"></span>
+                                            </button>
+                                            <button class="btn-icon">
+                                                <span class="icon-dots-three-horizontal"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </a>
                             </article>
                           </li>
                           <li class="splide__slide">
                             <article class="card card-lg">
-                                <div class="card-img">
-                                    <img src="assets/img/slide-card-1.jpg" alt="Placeholder image" loading="lazy">
-                                </div>
-                                <ul class="tags-list">
-                                    <li class="tags-item tags-primary">Balade nautique</li>
-                                </ul>
-                                <div class="card-overlay">
-                                    <h3>Louer un voilier avec ou sans skipper pour une sortie en mer</h3>
-                                    <div class="d-flex justify-between align-center">
-                                        <button class="btn-icon">
-                                            <span class="icon-heart-o"></span>
-                                        </button>
-                                        <button class="btn-icon">
-                                            <span class="icon-dots-three-horizontal"></span>
-                                        </button>
+                                <a href="#">
+                                    <div class="card-img">
+                                        <img src="assets/img/slide-card-2.jpg" alt="Placeholder image" loading="lazy">
                                     </div>
-                                </div>
+                                    <ul class="tags-list">
+                                        <li class="tags-item tags-primary">Balade nautique</li>
+                                    </ul>
+                                    <div class="card-overlay">
+                                        <h3 class="card-title">Louer un voilier avec ou sans skipper pour une sortie en mer</h3>
+                                        <div class="d-flex justify-between align-center">
+                                            <button class="btn-icon">
+                                                <span class="icon-heart-o"></span>
+                                            </button>
+                                            <button class="btn-icon">
+                                                <span class="icon-dots-three-horizontal"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                          </li>
+                          <li class="splide__slide">
+                            <article class="card card-lg">
+                                <a href="#">
+                                    <div class="card-img">
+                                        <img src="assets/img/slide-card-3.jpg" alt="Placeholder image" loading="lazy">
+                                    </div>
+                                    <ul class="tags-list">
+                                        <li class="tags-item tags-primary">Sport nautique</li>
+                                    </ul>
+                                    <div class="card-overlay">
+                                        <h3 class="card-title">Les meilleurs spots & activité pour le riders</h3>
+                                        <div class="d-flex justify-between align-center">
+                                            <button class="btn-icon">
+                                                <span class="icon-heart-o"></span>
+                                            </button>
+                                            <button class="btn-icon">
+                                                <span class="icon-dots-three-horizontal"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </a>
                             </article>
                           </li>
                           <li class="splide__slide">
@@ -436,7 +473,7 @@
                                         <li class="tags-item tags-primary">Sport nautique</li>
                                     </ul>
                                     <div class="card-overlay">
-                                        <h3>Les meilleurs spots & activité pour le riders</h3>
+                                        <h3 class="card-title">Les meilleurs spots & activité pour le riders</h3>
                                         <div class="d-flex justify-between align-center">
                                             <button class="btn-icon">
                                                 <span class="icon-heart-o"></span>
@@ -452,6 +489,31 @@
                       </ul>
                 </div>
               </section>
+        </section>
+        <section id="newsletter" class="block-content container">
+            <div class="d-flex justify-between align-center">
+                <div>
+                    <span class="subtitle text-primary">Newsletter</span>
+                    <h2 class="lead-title">Restez informé</h2>
+                </div>
+                <div>
+                    <a href="#" class="btn-icon btn-icon-circle" title="Lien vers notre compte Facebook">
+                        <span class="icon-facebook"></span>
+                    </a>
+                    <a href="#" class="btn-icon btn-icon-circle" title="Lien vers notre compte X">
+                        <span class="icon-x"></span>
+                    </a>
+                    <a href="#" class="btn-icon btn-icon-circle" title="Lien vers notre compte Instagram">
+                        <span class="icon-instagram"></span>
+                    </a>
+                </div>
+            </div>
+            
+            <form action="" method="post" class="newsletter-form">
+                <label for="email">Mon adresse mail</label>
+                <input id="email" type="email" placeholder="Mon adresse mail..." aria-required="true"/>
+                <button class="btn btn-primary" type="submit">Je m'inscris</button>
+            </form>
         </section>
     </main>
     <footer>

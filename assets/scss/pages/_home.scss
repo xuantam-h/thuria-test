@@ -20,14 +20,9 @@
 }
 
 #activities-around{
-    .splide__list{/*
-        li{
-            &:first-of-type{
-                transform: rotate(-2deg);
-            }
-            &:last-of-type{
-                transform: rotate(2deg);
-            }
-        }*/
+    .slider{
+        @include tablet {
+            padding:2.5rem 0 2.5rem 0;
+        }
     }
 }
