@@ -34,6 +34,36 @@
             display: block;
             object-fit: cover;
             object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    /* Specific properties for large cards */
+    &-lg{
+        position: relative;
+        .card-img{
+            width:100%;
+            min-height: 22.1875rem;
+        }
+        .card-overlay{
+            @include position-absolute(unset, 0, 0, unset);
+            padding: 10.25rem 1.375rem 1.25rem 1.375rem;
+            background-image: linear-gradient(to bottom, transparent, $dark-color);
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .tags-list{
+            @include position-absolute(10px,10px,unset,unset);
+        }
+        h3{
+            margin-bottom:1.875rem;
+            color:$white;
+            line-height: 1.3;
+            font-size: 1.4rem;
+        }
+        .btn-icon{
+            color:$white;
         }
     }
 }

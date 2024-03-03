@@ -17,3 +17,24 @@ tabs.forEach(tab => {
     target.classList.add('tab-active')
   })
 })
+
+// Splide JS
+
+document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '.splide' , {
+        perPage: 3,
+        rewind: true,
+        fixedHeight: 355,
+        gap: 20,
+        pagination: false,
+        breakpoints: {
+          768: {
+            perPage: 1,
+          },
+          992: {
+            perPage: 2,
+          },
+        }
+    });
+    splide.mount();
+});

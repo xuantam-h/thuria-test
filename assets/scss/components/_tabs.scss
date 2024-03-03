@@ -1,3 +1,19 @@
+.tabs{
+    &-header{
+        @extend .nav-links;
+    }
+}
+
+.tab{
+    @extend .nav-item;
+    cursor: pointer;
+    font-weight: $font-medium;
+    &-active{
+        @extend .nav-active;
+        font-weight: $font-bold;
+    }
+}
+
 [data-tab-content] {
     display: none;
 }

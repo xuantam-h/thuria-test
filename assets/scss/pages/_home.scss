@@ -18,3 +18,16 @@
         font-size: .9rem;
     }
 }
+
+#activities-around{
+    .splide__list{/*
+        li{
+            &:first-of-type{
+                transform: rotate(-2deg);
+            }
+            &:last-of-type{
+                transform: rotate(2deg);
+            }
+        }*/
+    }
+}

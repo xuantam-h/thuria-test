@@ -46,3 +46,11 @@ $xl: 1200px;
     outline: none;
     cursor: pointer;
 }
+
+@mixin position-absolute($top, $left, $bottom, $right) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+}
