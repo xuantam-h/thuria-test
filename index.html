@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Fonts -->
+    <!-- Google Fonts CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
     <!-- Minified JS files -->
-    <script src="assets/js/script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script src="assets/js/script.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js" defer></script>
     <!-- Minified CSS files -->
     <link rel="stylesheet" href="assets/css/main.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
     <title>Les Sables d'Olonne | Infos, tourisme, hébergements</title>
 </head>
 <body>
+    <!-- Main header / navbar -->
     <header id="main-header">
         <div class="container d-flex justify-between align-center">
             <nav class="nav-links">
@@ -85,6 +86,7 @@
                 </div>
             </div>
             <div class="hotel-content container">
+                <!-- Left side of hotel content -->
                 <div>
                     <div id="hotel-nav" class="d-flex justify-between align-center">
                         <nav class="nav-links">
@@ -94,7 +96,7 @@
                             <a href="#hotel-address" class="nav-item">Emplacement</a>
                             <a href="#hotel-hours" class="nav-item">Horaires</a>
                         </nav>
-                        <div class="d-flex gap-md">
+                        <div class="d-flex gap-sm">
                             <button class="btn-icon">
                                 <span class="icon-heart-o"></span>
                             </button>
@@ -189,12 +191,12 @@
                                 <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nomuny eirmod tempor invidunt.</p>
                             </div>
                         </div>
-                        <a href="#" class="btn btn-primary" title="Ouvrir la carte">Ouvrir la carte</a>
+                        <a href="#" class="btn btn-primary" title="Ouvrir la carte" target="_blank">Ouvrir la carte</a>
                     </div>
                     <div id="hotel-hours" class="block-content">
-                        <h2>Horaires</h2>
+                        <h2 class="mb-0">Horaires</h2>
                         <div class="tabs-container">
-                            <ul class="tabs-header">
+                            <ul class="tabs-header mt-0">
                                     <li class="tab-active tab" data-tab-target="#tab-1">Du 08/12/2023 au 19/12/2023</li>
                                     <li class="tab" data-tab-target="#tab-2">Du 20/12/2023 au 29/12/2023</li>
                             </ul>
@@ -374,14 +376,68 @@
                         </article>
                     </div>
                 </div>
+                <!-- Sidebar of hotel content -->
                 <aside class="hotel-aside">
-                    
+                    <div class="hotel-gallery">
+                        <section id="gallery-slider" class="splide" aria-label="Gallery slider of the hotel">
+                            <div class="splide__track">
+                                  <ul class="splide__list">
+                                      <li class="splide__slide">
+                                        <img src="assets/img/bedroom-1.jpg" alt="">
+                                      </li>
+                                      <li class="splide__slide">
+                                        <img src="assets/img/bedroom-2.jpg" alt="">
+                                      </li>
+                                      <li class="splide__slide">
+                                        <img src="assets/img/bedroom-3.jpg" alt="">
+                                      </li>
+                                  </ul>
+                            </div>
+                        </section>
+                        <p class="price">à partir de <br><span>180€</span></p>
+                        <div class="gallery-cta">
+                            <button class="btn btn-dark btn-small">Itinéraire</button>
+                            <button class="btn btn-dark btn-small">Galerie</button>
+                        </div>
+                    </div>
+                    <div class="aside-content">
+                        <div class="hotel-street d-flex gap-lg">
+                            <p class="m-0 text-bold">Adresse</p>
+                            <p class="m-0 text-xs">Magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                        </div>
+                        <div class="hotel-services d-flex gap-lg">
+                            <p class="m-0 text-bold">Services</p>
+                            <div class="d-flex gap-xs">
+                                <div class="alert-icon">
+                                    <span class="icon-connection"></span>
+                                </div>
+                                <div class="alert-icon">
+                                    <span class="icon-local_parking"></span>
+                                </div>
+                                <div class="alert-icon">
+                                    <span class="icon-tv"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hotel-cta d-flex gap-xs">
+                            <a href="tel:+123456" class="btn-icon btn-icon-circle btn-tooltip" data-tooltip="Nous appeler">
+                                <span class="icon-phone"></span>
+                            </a>
+                            <a href="#" class="btn-icon btn-icon-circle btn-tooltip" data-tooltip="Nous écrire">
+                                <span class="icon-envelope-o"></span>
+                            </a>
+                            <a href="#" class="btn-icon btn-icon-circle btn-tooltip" data-tooltip="Voir le site">
+                                <span class="icon-globe"></span>
+                            </a>
+                            <button class="btn btn-primary">Réserver</button>
+                        </div>
+                    </div>
                 </aside>
             </div>
         </section>
         <section id="activities-around" class="block-content container">
             <h2 class="lead-title">Activités proches</h2>
-            <section class="splide slider" aria-label="Carousel des activités proches">
+            <section id="cards-slider" class="splide slider" aria-label="Carousel des activités proches">
                 <!-- Custom slider arrows -->
                 <div class="splide__arrows">
                     <button class="splide__arrow splide__arrow--prev">
@@ -398,7 +454,7 @@
                             <article class="card card-lg">
                                 <a href="#">
                                     <div class="card-img">
-                                        <img src="assets/img/slide-card-1.jpg" alt="Placeholder image" loading="lazy">
+                                        <img src="assets/img/slide-card-1.jpg" alt="Jeune homme en combinaison surfant sur une vague" loading="lazy">
                                     </div>
                                     <ul class="tags-list">
                                         <li class="tags-item tags-primary">Sport nautique</li>
@@ -421,7 +477,7 @@
                             <article class="card card-lg">
                                 <a href="#">
                                     <div class="card-img">
-                                        <img src="assets/img/slide-card-2.jpg" alt="Placeholder image" loading="lazy">
+                                        <img src="assets/img/slide-card-2.jpg" alt="Bande d'amis marchant le long de la plage" loading="lazy">
                                     </div>
                                     <ul class="tags-list">
                                         <li class="tags-item tags-primary">Balade nautique</li>
@@ -444,7 +500,7 @@
                             <article class="card card-lg">
                                 <a href="#">
                                     <div class="card-img">
-                                        <img src="assets/img/slide-card-3.jpg" alt="Placeholder image" loading="lazy">
+                                        <img src="assets/img/slide-card-3.jpg" alt="Un surfer tenant sa planche regarde son camarade surfer" loading="lazy">
                                     </div>
                                     <ul class="tags-list">
                                         <li class="tags-item tags-primary">Sport nautique</li>
@@ -491,32 +547,43 @@
               </section>
         </section>
         <section id="newsletter" class="block-content container">
-            <div class="d-flex justify-between align-center">
+            <div class="newsletter-header d-flex justify-between align-center">
                 <div>
                     <span class="subtitle text-primary">Newsletter</span>
-                    <h2 class="lead-title">Restez informé</h2>
+                    <h2 class="lead-title mb-0">Restez informé</h2>
                 </div>
-                <div>
-                    <a href="#" class="btn-icon btn-icon-circle" title="Lien vers notre compte Facebook">
+                <div class="social-links">
+                    <a href="#" class="btn-icon btn-icon-circle btn-tooltip" aria-label="Voir le lien Facebook" data-tooltip="Lien Facebook" target="_blank">
                         <span class="icon-facebook"></span>
                     </a>
-                    <a href="#" class="btn-icon btn-icon-circle" title="Lien vers notre compte X">
+                    <a href="#" class="btn-icon btn-icon-circle btn-tooltip" aria-label="Voir le lien X" data-tooltip="Lien X" target="_blank">
                         <span class="icon-x"></span>
                     </a>
-                    <a href="#" class="btn-icon btn-icon-circle" title="Lien vers notre compte Instagram">
+                    <a href="#" class="btn-icon btn-icon-circle btn-tooltip" aria-label="Voir le lien Instagram" data-tooltip="Lien Instagram" target="_blank">
                         <span class="icon-instagram"></span>
                     </a>
                 </div>
             </div>
             
             <form action="" method="post" class="newsletter-form">
-                <label for="email">Mon adresse mail</label>
-                <input id="email" type="email" placeholder="Mon adresse mail..." aria-required="true"/>
-                <button class="btn btn-primary" type="submit">Je m'inscris</button>
+                <fieldset class="newsletter-input">
+                    <label for="email">Mon adresse mail</label>
+                    <input id="email" type="email" name="email" placeholder="Mon adresse mail..." aria-required="true"/>
+                    <button class="btn btn-primary" type="submit">Je m'inscris</button>
+                </fieldset>
+                <div class="newsletter-gdrp">
+                    <input class="gdrp-checkbox shrink-0" type="checkbox">
+                    <p class="text-xs">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                </div>
             </form>
         </section>
+        <section id="leaflets" class="block-content container">
+            <h2>Nos brochures</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+            <a href="#" class="btn btn-outline">Voir toutes les brochures</a>
+        </section>
     </main>
-    <footer>
+    <footer id="footer">
 
     </footer>
 </body>

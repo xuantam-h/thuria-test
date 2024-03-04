@@ -1,5 +1,5 @@
-#activities-around{
-    .splide__list{/*
+#cards-slider{
+    .splide__list{/*    
         li{
             &:first-of-type{
                 transform: rotate(-2deg);
@@ -26,5 +26,19 @@
     }
     .splide__arrow--next{
         right:-1em;
+    }
+}
+
+#gallery-slider{
+    .splide__pagination{
+        justify-content: flex-start;
+        bottom:30px;
+        left: 30px;
+        padding: 0;
+        gap:5px;
+    }
+    .splide__pagination__page.is-active{
+        opacity: 1;
+        transform:none;
     }
 }

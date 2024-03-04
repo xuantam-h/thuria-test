@@ -6,7 +6,10 @@
     }
     &-icon{
         background-color: $tertiary-color;
-        padding: 1rem;
+        @include flex-jc-center-ai-center;
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
 
         > span{
             display: block;

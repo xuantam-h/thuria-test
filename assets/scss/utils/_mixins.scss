@@ -36,6 +36,12 @@ $xl: 1200px;
     align-items: center;
 }
 
+@mixin flex-jc-center-ai-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin reset-list{
     list-style: none;
     padding: 0;
@@ -59,4 +65,9 @@ $xl: 1200px;
     left: $left;
     bottom: $bottom;
     right: $right;
+}
+
+@mixin object-fit($fit, $position) {
+    object-fit: $fit;
+    object-position: $position;
 }

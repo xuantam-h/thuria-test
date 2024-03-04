@@ -1,6 +1,6 @@
 #main-header{
     background-color: $dark-color;
-    position: fixed;
+    position: sticky;
     top:0;
     left: 0;
     width: 100%;
@@ -19,7 +19,7 @@
 }
 
 .nav-widgets{
-    @include flex-container("row", "flex-start", "center", "wrap", 1.875rem);
+    @include flex-container("row", "flex-start", "center", "wrap", 1.7rem);
     button{
         color:$white;
         &:hover{

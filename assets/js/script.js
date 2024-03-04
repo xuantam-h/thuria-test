@@ -21,7 +21,7 @@ tabs.forEach(tab => {
 // Splide JS
 
 document.addEventListener( 'DOMContentLoaded', function() {
-    var splide = new Splide( '.splide' , {
+    new Splide('#cards-slider', {
         perPage: 3,
         rewind: true,
         fixedHeight: 355,
@@ -35,6 +35,12 @@ document.addEventListener( 'DOMContentLoaded', function() {
             perPage: 2,
           },
         }
-    });
-    splide.mount();
+    }).mount();
+
+    new Splide('#gallery-slider', {
+      fixedHeight: 300,
+      arrows: false,
+      pagination: true,
+      autoplay: true,
+  }).mount();
 });

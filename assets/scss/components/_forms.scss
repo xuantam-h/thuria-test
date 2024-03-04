@@ -1,12 +1,17 @@
 form.newsletter-form{
-    @include flex-container("column", "center", "center", "nowrap", 0);
-    background-color: $white;
-    padding: 3.125rem 2.5rem;
-    box-shadow: 0px 25px 80px rgba(0, 0, 0, 0.15);
 
-    @include mobile{
-        flex-direction: row;
-        justify-content: space-between;
+    .newsletter-input{
+        @include flex-container("column", "center", "center", "nowrap", 0);
+        border: none;
+        background-color: $white;
+        padding: 3.125rem 2.5rem;
+        box-shadow: $card-shadow;
+        margin-bottom: .4rem;
+    
+        @include mobile{
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
     label{
@@ -33,5 +38,53 @@ form.newsletter-form{
             text-align: left;
             margin-bottom: 0;
         }
+
+        &::placeholder{
+            opacity: 1;
+        }
     }
 }
+
+.newsletter-gdrp{
+    @include flex-container("row", "flex-start", "center", "nowrap", 1.25rem);
+}
+
+.newsletter-header{
+    margin-bottom: 1.5rem;
+}
+
+input.gdrp-checkbox {
+    position: relative;
+    -webkit-appearance: none;
+    outline: none;
+    width: 50px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #D9DADC;
+    border-radius: 50px;
+    box-shadow: inset -20px 0 0 0 #fff;
+  }
+  
+  input.gdrp-checkbox:after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background: transparent;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+  }
+  
+  input.gdrp-checkbox:checked {
+    box-shadow: inset 20px 0 0 0 $secondary-color;
+    border-color: $secondary-color;
+  }
+  
+  input.gdrp-checkbox:checked:after {
+    left: 20px;
+    box-shadow: -2px 4px 3px rgba(0,0,0,0.05);
+  }
+  
+  

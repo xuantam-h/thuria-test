@@ -22,6 +22,10 @@
     font-style: italic;
 }
 
+.text-bold{
+    font-weight: $font-bold;
+}
+
 .d-flex{
     display: flex;
 }
@@ -52,6 +56,26 @@
 
 .gap-md{
     gap: 1.875rem;
+}
+
+.gap-lg{
+    gap:2.5rem;
+}
+
+.shrink-0{
+    flex-shrink: 0;
+}
+
+.m-0{
+    margin:0;
+}
+
+.mb-0{
+    margin-bottom: 0;
+}
+
+.mt-0{
+    margin-top: 0;
 }
 
 .underline-link{
