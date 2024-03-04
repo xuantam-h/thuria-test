@@ -1,6 +1,12 @@
 #hotel{
-    background: linear-gradient(to bottom, $dark-color 12%, $white 12%);
-    padding-top: 3.75rem;
+    background: linear-gradient(to bottom, $dark-color 9%, $white 9%);
+    padding-top: 1.75rem;
+
+    @include tablet{
+        padding-top: 3.75rem;
+        background: linear-gradient(to bottom, $dark-color 12%, $white 12%);
+    }
+
     h1{
         margin-top:1.4rem;
         margin-bottom: .5rem;
@@ -10,10 +16,11 @@
 }
 
 .hotel-content{
-    @include flex-container("column", "space-between", "flex-start", "nowrap", 2rem);
+    @include flex-container("column", "space-between", "unset", "nowrap", 2rem);
 
     @include tablet{
         flex-direction: row;
+        align-items: flex-start;
     }
 }
 
@@ -21,11 +28,11 @@ aside#hotel-aside{
     box-shadow: $card-shadow;
     border-radius: $card-radius;
     overflow: hidden;
-    
+
     @include tablet{
         position: sticky;
         top:11vh;
-        margin-top:6rem;
+        margin-top:5.5rem;
         max-width: 29.375rem;
     }
     img{
@@ -64,6 +71,7 @@ aside#hotel-aside{
  
 #hotel-nav{
     margin-top:4rem;
+    gap:2.5rem;
 }
 
 #hotel-useful-info{
@@ -82,7 +90,7 @@ aside#hotel-aside{
 
 #leaflets{
     @include flex-container("column", "space-between", "center", "nowrap", 0);
-    padding-top:4.375rem;
+    padding-top:3.375rem;
     padding-bottom:4.375rem;
 
     @include tablet{
@@ -114,6 +122,9 @@ aside#hotel-aside{
         @include tablet{
             margin-bottom: 0;
             order:2;
+        }
+
+        @include desktop{
             &:after{
                 content:url("../img/leaflet-bg.png");
                 position: absolute;
@@ -128,7 +139,7 @@ aside#hotel-aside{
             border:4px solid $white;
             position: relative;
             max-width: 100px;
-            @include tablet{
+            @include desktop{
                 max-width: 11.25rem;
             }
 
@@ -149,10 +160,19 @@ aside#hotel-aside{
 
 #map-locations{
     background: linear-gradient(to top right, $dark-color, #154e67);
-    padding-bottom: 7rem;
+    padding-bottom: 10rem;
+    @include tablet{
+        padding-bottom: 9rem;
+        padding-top: 4rem;
+    }
+    @include desktop{
+        padding-top: 0;
+    }
 
     >div{
+        @include flex-container("column", "flex-start", "center", "nowrap", 0);
         @include tablet{
+            flex-direction: row;
             gap:3.75rem;
         }
     }
@@ -160,6 +180,9 @@ aside#hotel-aside{
     .map-text{
         color:$white;
         @include tablet{
+            max-width: 45%;
+        }
+        @include desktop{
             max-width: 30%;
         }
     }
@@ -171,11 +194,22 @@ aside#hotel-aside{
     img{
         max-width: 100%;
         margin-top:-2.5rem;
+        @include tablet{
+            width: 50%;
+        }
+        @include desktop{
+            width: 100%;
+        }
     }
 }
 
 #related-links{
     margin-top:-6rem;
+    margin-bottom: 4rem;
+
+    @include tablet{
+        margin-bottom: 0;
+    }
     
     >div{
         @include flex-container("column", "space-between", "flex-start", "nowrap", 1.5rem);

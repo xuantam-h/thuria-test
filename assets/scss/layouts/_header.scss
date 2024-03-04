@@ -4,14 +4,21 @@
     top:0;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     padding: 1rem 0;
     @include tablet{
         padding: 0;
     }
 
     .nav-links{
+        display: none;
+        @include tablet{
+            @include flex-container("row", "flex-start", "center", "wrap", 1.25rem);
+            list-style: none;
+            padding: 0;
+        }
         .nav-item{
+
             &:hover{
                 color:$white;
             }
@@ -21,15 +28,29 @@
             color:$white;
         }
     }
-}
 
-.nav-widgets{
-    @include flex-container("row", "flex-start", "center", "wrap", 1.7rem);
-    .btn-icon{
-        color:$white;
-        &:hover{
-            color:$primary-color;
+    .nav-cta{
+        @include tablet{
+            @include flex-container("row", "flex-start", "center", "nowrap", 1.7rem);
         }
     }
+    
+    .nav-widgets{
+        display: none;
+    
+        @include tablet{
+            @include flex-container("row", "flex-start", "center", "wrap", 1.7rem);
+        }
+        
+        .btn-icon{
+            color:$white;
+            &:hover{
+                color:$primary-color;
+            }
+        }
+    }
+
 }
+
+
 

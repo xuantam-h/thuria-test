@@ -3,14 +3,15 @@
 
     a{
         @include reset-link;
-        @include flex-container("row", "flex-start", "center", "wrap", 1.25rem);
+        @include flex-container("column", "flex-start", "stretch", "wrap", 1.25rem);
+        @include mobile{
+            flex-direction: row;
+            align-items: center;
+        }
     }
 
     .tags-list{
         margin: 8px 0;
-        @include tablet{
-            margin-top:3px;
-        }
     }
 
     h3{
@@ -34,8 +35,12 @@
     }
 
     &-img{
-        width: 8.75rem;
-        height: 8.75rem;
+        width: 100%;
+        height: 200px;
+        @include mobile{
+            width: 8.75rem;
+            height: 8.75rem;
+        }
         img{
             display: block;
             object-fit: cover;
@@ -76,7 +81,10 @@
 
     &-shadow{
         background-color: $white;
-        padding:3.125rem 2.5rem;
+        padding:2.5rem;
         box-shadow: $card-shadow;
+        @include tablet{
+            padding:3.125rem 2.5rem;
+        }
     }
 }

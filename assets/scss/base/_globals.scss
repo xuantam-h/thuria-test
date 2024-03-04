@@ -111,6 +111,11 @@ body{
     font-family: $font-family;
     font-size: 1.05rem;
     font-weight: $font-medium;
+    background: no-repeat url("../img/chevron.svg");
+    background-position: right bottom 7px;
+    padding-right: .7rem;
+    background-size: 10px;
+
     option{
         color:$dark-color;
     }

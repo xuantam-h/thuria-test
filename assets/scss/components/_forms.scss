@@ -5,7 +5,7 @@ form.newsletter-form{
         border: none;
         margin-bottom: .4rem;
     
-        @include mobile{
+        @include tablet{
             padding: 3.125rem 2.5rem;
             flex-direction: row;
             justify-content: space-between;
@@ -25,13 +25,13 @@ form.newsletter-form{
     input{
         background-color: transparent;
         border: none;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         font-family: $font-family;
         color: $dark-color;
         text-align: center;
         margin-bottom: 1.5rem;
 
-        @include mobile{
+        @include tablet{
             font-size: 1.7rem;
             text-align: left;
             margin-bottom: 0;
@@ -39,6 +39,12 @@ form.newsletter-form{
 
         &::placeholder{
             opacity: 1;
+        }
+    }
+    input[type="email"]{
+        width: 100%;
+        @include tablet{
+            width: 50%;
         }
     }
 }
