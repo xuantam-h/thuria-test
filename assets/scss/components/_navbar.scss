@@ -1,9 +1,12 @@
 .nav{
     &-links{
-        display: flex;
-        gap:1.25rem;
-        list-style: none;
-        padding: 0;
+        display: none;
+        @include tablet{
+            display: flex;
+            gap:1.25rem;
+            list-style: none;
+            padding: 0;
+        }
     }
     &-item{
         font-size: .9rem;

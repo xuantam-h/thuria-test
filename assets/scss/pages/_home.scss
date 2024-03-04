@@ -1,15 +1,11 @@
-.hotel-upper{
-    background-color: $dark-color;
+#hotel{
+    background: linear-gradient(to bottom, $dark-color 12%, $white 12%);
     padding-top: 3.75rem;
-    color:$white;
     h1{
         margin-top:1.4rem;
         margin-bottom: .5rem;
         color:$white;
         line-height: 1.05;
-        @include tablet{
-            max-width: 60%;
-        }
     }
 }
 
@@ -19,53 +15,57 @@
     @include tablet{
         flex-direction: row;
     }
+}
 
-    > div{
-        flex:2;
-        order:2;
+aside#hotel-aside{
+    box-shadow: $card-shadow;
+    border-radius: $card-radius;
+    overflow: hidden;
+    
+    @include tablet{
+        position: sticky;
+        top:11vh;
+        margin-top:6rem;
+        max-width: 29.375rem;
     }
-    aside{
-        order:1;
-        flex:1;
-        box-shadow: $card-shadow;
-        border-radius: $card-radius;
-        @include tablet{
-            position: sticky;
-            top:11vh;
-            order:2;
-        }
-        img{
-            width: 100%;
-            height: 300px;
-            @include object-fit("cover", "center");
-        }
-        .hotel-gallery{
-            position: relative;
-        }
-        .price{
-            position: absolute;
-            top:30px;
-            right:30px;
-            margin: 0;
-        }
-        .gallery-cta{
-            position: absolute;
-            right: 30px;
-            bottom: 20px;
-        }
-        .hotel-street{
-            margin-bottom: 1.25rem;
-        }
-        .hotel-services{
-            margin-bottom: 2.5rem;
-        }
+    img{
+        width: 100%;
+        height: 300px;
+        @include object-fit("cover", "center");
+    }
+    .hotel-gallery{
+        position: relative;
+        border-radius: 6px 6px 0 0;
+        overflow: hidden;
+    }
+    .price{
+        position: absolute;
+        top:30px;
+        right:30px;
+        margin: 0;
+    }
+    .gallery-cta{
+        position: absolute;
+        right: 30px;
+        bottom: 20px;
+    }
+    .hotel-street{
+        margin-bottom: 1.25rem;
+    }
+    .hotel-services{
+        margin-bottom: 2.5rem;
     }
     .aside-content{
         padding: 1.875rem;
         background-color: $white;
+        border-radius: 0 0 6px 6px;
     }
 }
  
+#hotel-nav{
+    margin-top:4rem;
+}
+
 #hotel-useful-info{
     h3{
         font-size: .9rem;
@@ -76,6 +76,135 @@
     .slider{
         @include tablet {
             padding:2.5rem 0 2.5rem 0;
+        }
+    }
+}
+
+#leaflets{
+    @include flex-container("column", "space-between", "center", "nowrap", 0);
+    padding-top:4.375rem;
+    padding-bottom:4.375rem;
+
+    @include tablet{
+        flex-direction: row;
+        padding-bottom:8.375rem;
+    }
+
+    .leaflets-text{
+        order:2;
+        @include tablet{
+            order:1;
+            max-width: 45%;
+        }
+        h2{
+            font-size:2.5rem;
+        }
+        a{
+            margin-top:1.3rem;
+        }
+    }
+
+    .leaflets-wrapper{
+        @include flex-align-center;
+        justify-content: center;
+        position: relative;
+        margin-bottom:4rem;
+        order:1;
+
+        @include tablet{
+            margin-bottom: 0;
+            order:2;
+            &:after{
+                content:url("../img/leaflet-bg.png");
+                position: absolute;
+                bottom: -60px;
+                left: -40px;
+                z-index: -2;
+            }
+        }
+
+        img{
+            box-shadow: $card-shadow;
+            border:4px solid $white;
+            position: relative;
+            max-width: 100px;
+            @include tablet{
+                max-width: 11.25rem;
+            }
+
+            &:first-child{
+                transform:rotate(-8deg);
+                z-index: -1;
+            }
+            &:nth-child(2){
+                transform:translateY(-18%) rotate(7deg);
+            }
+            &:last-child{
+                transform:translateX(-30%) translateY(15%) rotate(18deg);
+                z-index: -1;
+            }
+        }
+    }
+}
+
+#map-locations{
+    background: linear-gradient(to top right, $dark-color, #154e67);
+    padding-bottom: 7rem;
+
+    >div{
+        @include tablet{
+            gap:3.75rem;
+        }
+    }
+
+    .map-text{
+        color:$white;
+        @include tablet{
+            max-width: 30%;
+        }
+    }
+    
+    a{
+        margin-top:40px;
+    }
+
+    img{
+        max-width: 100%;
+        margin-top:-2.5rem;
+    }
+}
+
+#related-links{
+    margin-top:-6rem;
+    
+    >div{
+        @include flex-container("column", "space-between", "flex-start", "nowrap", 1.5rem);
+        @include tablet{
+            flex-direction: row;
+            gap:6%;
+        }
+    }
+
+    a{
+        &:after{
+            content: "\e910";
+            font-family: icomoon !important;
+            font-size: 1.5rem;
+        }
+        &:nth-child(1){
+            &:after{
+                color:$green-color;
+            }
+        }
+        &:nth-child(2){
+            &:after{
+                color:$light-blue-color;
+            }
+        }
+        &:nth-child(3){
+            &:after{
+                color:$purple-color;
+            }
         }
     }
 }

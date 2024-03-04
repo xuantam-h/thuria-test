@@ -47,20 +47,26 @@
                 </button>
                 <button class="btn-menu">
                     Menu
+                    <div class="btn-menu-bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </button>
             </div>
         </div>
     </header>
     <main>
         <section id="hotel">
-            <div class="hotel-upper">
-                <div class="container">
-                    <div class="ratings">
-                        <p class="ratings-data">8.6/10</p>
+            <div class="hotel-content d-flex container">
+                <!-- Left side of hotel content -->
+                <div>
+                    <div class="ratings text-white">
+                        <p class="ratings-data">8.6<span>/10</span></p>
                         <p class="ratings-data-number">853 évaluations</p>
                         <a href="#" class="underline-link text-white">Lire les avis</a>
                     </div>
-                    <h1>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</h1>
+                    <h1 class="text-white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</h1>
                     <div class="d-flex align-center gap-xs">
                         <ul class="tags-list">
                             <li class="tags-item tags-primary">Hôtel</li>
@@ -71,7 +77,7 @@
                             <span class="icon-star-full"></span>
                         </div>
                     </div>
-                    <div class="location">
+                    <div class="location text-white">
                         <span class="icon-map-pin"></span>
                         <p>L'ile-d'yeu</p>
                     </div>
@@ -80,14 +86,6 @@
                         <li><a href="#">Nos hôtels</a></li>
                         <li><a href="#" class="breadcrumb-current">Lorem ipsum dolor sit amet, consetetur sadipsci...</a></li>
                     </ul>
-                </div>
-                <div class="divider">
-                    <img src="assets/img/SO-mask.svg" alt="">
-                </div>
-            </div>
-            <div class="hotel-content container">
-                <!-- Left side of hotel content -->
-                <div>
                     <div id="hotel-nav" class="d-flex justify-between align-center">
                         <nav class="nav-links">
                             <a href="#hotel-useful-info" class="nav-item nav-active">Infos pratiques</a>
@@ -321,7 +319,7 @@
                                         </div>
                                     </div>
                                 </div>
-                              </div>
+                                </div>
                         </div>
                     </div>
                     <div id="hotel-more-links" class="block-content">
@@ -376,8 +374,7 @@
                         </article>
                     </div>
                 </div>
-                <!-- Sidebar of hotel content -->
-                <aside class="hotel-aside">
+                <aside id="hotel-aside">
                     <div class="hotel-gallery">
                         <section id="gallery-slider" class="splide" aria-label="Gallery slider of the hotel">
                             <div class="splide__track">
@@ -426,7 +423,7 @@
                             <a href="#" class="btn-icon btn-icon-circle btn-tooltip" data-tooltip="Nous écrire">
                                 <span class="icon-envelope-o"></span>
                             </a>
-                            <a href="#" class="btn-icon btn-icon-circle btn-tooltip" data-tooltip="Voir le site">
+                            <a href="https://xuantam-h.github.io/xuantam-hoang/" class="btn-icon btn-icon-circle btn-tooltip" data-tooltip="Voir le site" target="_blank">
                                 <span class="icon-globe"></span>
                             </a>
                             <button class="btn btn-primary">Réserver</button>
@@ -523,7 +520,7 @@
                             <article class="card card-lg">
                                 <a href="#">
                                     <div class="card-img">
-                                        <img src="assets/img/slide-card-1.jpg" alt="Placeholder image" loading="lazy">
+                                        <img src="assets/img/slide-card-1.jpg" alt="Jeune homme en combinaison surfant sur une vague" loading="lazy">
                                     </div>
                                     <ul class="tags-list">
                                         <li class="tags-item tags-primary">Sport nautique</li>
@@ -553,20 +550,19 @@
                     <h2 class="lead-title mb-0">Restez informé</h2>
                 </div>
                 <div class="social-links">
-                    <a href="#" class="btn-icon btn-icon-circle btn-tooltip" aria-label="Voir le lien Facebook" data-tooltip="Lien Facebook" target="_blank">
+                    <a href="#" class="btn-icon btn-icon-circle btn-tooltip" data-tooltip="Lien Facebook" target="_blank">
                         <span class="icon-facebook"></span>
                     </a>
-                    <a href="#" class="btn-icon btn-icon-circle btn-tooltip" aria-label="Voir le lien X" data-tooltip="Lien X" target="_blank">
+                    <a href="#" class="btn-icon btn-icon-circle btn-tooltip" data-tooltip="Lien X" target="_blank">
                         <span class="icon-x"></span>
                     </a>
-                    <a href="#" class="btn-icon btn-icon-circle btn-tooltip" aria-label="Voir le lien Instagram" data-tooltip="Lien Instagram" target="_blank">
+                    <a href="#" class="btn-icon btn-icon-circle btn-tooltip" data-tooltip="Lien Instagram" target="_blank">
                         <span class="icon-instagram"></span>
                     </a>
                 </div>
-            </div>
-            
+            </div>    
             <form action="" method="post" class="newsletter-form">
-                <fieldset class="newsletter-input">
+                <fieldset class="newsletter-input card-shadow">
                     <label for="email">Mon adresse mail</label>
                     <input id="email" type="email" name="email" placeholder="Mon adresse mail..." aria-required="true"/>
                     <button class="btn btn-primary" type="submit">Je m'inscris</button>
@@ -578,13 +574,88 @@
             </form>
         </section>
         <section id="leaflets" class="block-content container">
-            <h2>Nos brochures</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-            <a href="#" class="btn btn-outline">Voir toutes les brochures</a>
+            <div class="leaflets-text">
+                <h2>Nos brochures</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                <a href="#" class="btn btn-outline">Voir toutes les brochures</a>
+            </div>
+            <div class="leaflets-wrapper d-flex">
+                <img src="assets/img/brochure-2.jpg" alt="Couverture d'une brochure sur les Sables d'Olonne">
+                <img src="assets/img/brochure-1.jpg" alt="Couverture d'une brochure sur les Sables d'Olonne">
+                <img src="assets/img/brochure-3.jpg" alt="Couverture d'une brochure sur les Sables d'Olonne">
+            </div>
+        </section>
+        <section id="map-locations">
+            <div class="container d-flex align-center text-center">
+                <img src="assets/img/carte-sables-olonne.png" alt="Carte Sables d'Olonne">
+                <div class="map-text">
+                    <h2 class="lead-title text-white line-height-normal">Comment venir ?</h2>
+                    <p class="m-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    <a href="#" class="btn btn-outline text-white">Venir sans ma voiture</a>
+                </div>
+            </div>
+        </section>
+        <section id="related-links" class="container">
+            <div class="card-shadow">
+                <a href="#" class="line-btn">
+                    <div class="btn-icon btn-icon-circle btn-green shrink-0">
+                        <span class="icon-coin-euro"></span>
+                    </div>
+                    Je veux investir aux Sables d'Olonne
+                </a>
+                <a href="#" class="line-btn">
+                    <div class="btn-icon btn-icon-circle btn-light-blue shrink-0">
+                        <span class="icon-home"></span>
+                    </div>
+                    Je veux vivre aux Sables d'Olonne
+                </a>
+                <a href="#" class="line-btn">
+                    <div class="btn-icon btn-icon-circle btn-purple shrink-0">
+                        <span class="icon-calendar"></span>
+                    </div>
+                    Je veux organiser un évènement aux Sables d'Olonne
+                </a>
+            </div>
+            
         </section>
     </main>
-    <footer id="footer">
-
+    <footer id="main-footer" class="container">
+        <div class="footer-widgets">
+            <div class="footer-1">
+                <img src="assets/img/logo-white-bg.jpg" alt="Logo Les Sables d'Olonne">
+                <p class="mb-0">21, place du Poilu de France</p>
+                <p class="m-0">85118 Les Sables d'Olonne cedex</p>
+                <div class="footer-cta d-flex flex-column align-start gap-sm">
+                    <a href="tel:+123456" class="btn btn-outline">+33 02 51 23 16 00</a>
+                    <a href="tel:+123456" class="btn btn-primary">Nous contacter</a>
+                </div>
+            </div>
+            <div class="footer-2">
+                <p class="subtitle">Liens utiles</p>
+                <nav>
+                    <a href="#">Nos offices de tourisme</a>
+                    <a href="#">Démarche qualité</a>
+                    <a href="#">Rendez-vous visio</a>
+                </nav>
+            </div>
+            <div class="footer-3">
+                <p class="subtitle">Services</p>
+                <nav>
+                    <a href="#">Espace pro/presse</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Groupes</a>
+                </nav>
+                <img src="assets/img/vendee.jpg" alt="Logo en Vendée">
+            </div>
+        </div>
+        <div class="footer-mentions d-flex justify-between">
+            <p class="m-0">SPL Destination Les Sables d'Olonne 2023 - Tous droits réservés</p>
+            <nav class="footer-links d-flex gap-md">
+                <a href="#">Mentions légales</a>
+                <a href="#">Gestion des cookies</a>
+                <a href="#">Données personnelles</a>
+            </nav>
+        </div>
     </footer>
 </body>
 </html>

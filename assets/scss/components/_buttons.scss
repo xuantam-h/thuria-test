@@ -23,6 +23,7 @@
     &-outline{
         border-color: $primary-color;
         color: $dark-color;
+        padding: 1rem 2.8rem;
         &:hover{
             background-color: $primary-color;
             color: $white;
@@ -91,12 +92,39 @@
     }
 
     &-menu{
+        @include flex-container("row", "flex-start", "center", "nowrap", .75rem);
         background-color: $secondary-color;
+        color:$white;
         border: none;
-        padding: 1rem;
         font-family: $font-family;
         font-weight: $font-bold;
-        border-radius: 1.625rem 0 0 1.625rem;
+        padding: .9rem 1.625rem;
+        border-radius: 1.875rem;
+        transition: 250ms background ease-in-out;
+        cursor: pointer;
+
+        &:hover{
+            background-color: darken($secondary-color, 10%);
+            color:$white;
+        }
+
+        &-bars{
+            @include flex-container("column", "center", "center", "nowrap", 5px);
+
+            span{
+                display: block;
+                width:11px;
+                height:2px;
+                background-color: $white;
+                &:nth-child(2){
+                    width:1.15rem;
+                }
+                &:last-child{
+                    margin:0;
+                }
+            }
+        }
+
     }
     &-icon{
         @include reset-btn;
@@ -121,5 +149,40 @@
                 color:$white;
             }
         }
+    }
+    &-green{
+        background-color: lighten($green-color,20%);
+        border-color: lighten($green-color,20%);
+        &:hover{
+            background-color:$green-color;
+            border-color: $green-color;
+        }
+    }
+    &-purple{
+        background-color: lighten($purple-color, 20%);
+        border-color: lighten($purple-color, 20%);
+        &:hover{
+            background-color:$purple-color;
+            border-color: $purple-color;
+        }
+    }
+    &-light-blue{
+        background-color: lighten($light-blue-color,20%);
+        border-color: lighten($light-blue-color,20%);
+        &:hover{
+            background-color:$light-blue-color;
+            border-color: $light-blue-color;
+        }
+    }
+}
+
+.line-btn{
+    @include flex-container("row", "flex-start", "center", "nowrap", .75rem);
+    @include reset-link;
+    font-weight: $font-bold;
+    line-height: 1.1;
+    flex: 1;
+    @include tablet{
+        font-size: 1.1rem;
     }
 }

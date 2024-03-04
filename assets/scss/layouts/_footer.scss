@@ -1,0 +1,54 @@
+#main-footer{
+    @include tablet{
+        padding-top: 3.75rem;
+    }
+    nav{
+        a{
+            @include reset-link;
+        }
+    }
+    .footer-widgets{
+        @include flex-container("column", "space-between", "center", "nowrap", 1rem);
+        margin-bottom: 5rem;
+        
+        @include tablet{
+            flex-direction: row;
+            align-items: flex-start;
+            gap:5%;
+        }
+
+        >div{
+            flex:1;
+        }
+
+        .subtitle{
+            font-size: 1.5rem;
+            font-weight: $font-bold;
+            margin-top: 0;
+            margin-bottom: 3rem;
+        }
+
+        nav{
+            @include flex-container("column", "flex-start", "flex-start", "nowrap", 1rem);
+        }
+
+        .footer-cta{
+            margin-top:2.5rem;
+        }
+
+        .footer-3{
+            img{
+                margin-top:3rem;
+            }
+        }
+    }
+    .footer-mentions{
+        @include flex-container("column", "space-between", "center", "nowrap", 1rem);
+        padding: 2.625rem 0;
+        border-top:2px solid $primary-color;
+        font-size:.9rem;
+        @include tablet{
+            flex-direction: row;
+        }
+    }
+}

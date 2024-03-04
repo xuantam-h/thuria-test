@@ -3,12 +3,10 @@ form.newsletter-form{
     .newsletter-input{
         @include flex-container("column", "center", "center", "nowrap", 0);
         border: none;
-        background-color: $white;
-        padding: 3.125rem 2.5rem;
-        box-shadow: $card-shadow;
         margin-bottom: .4rem;
     
         @include mobile{
+            padding: 3.125rem 2.5rem;
             flex-direction: row;
             justify-content: space-between;
         }

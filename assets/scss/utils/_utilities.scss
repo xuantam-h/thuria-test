@@ -11,7 +11,7 @@
 }
 
 .text-white{
-    color: $white;
+    color: $white !important;
 }
 
 .text-primary{
@@ -26,12 +26,28 @@
     font-weight: $font-bold;
 }
 
+.d-block{
+    display: block;
+}
+
 .d-flex{
     display: flex;
 }
 
+.flew-row{
+    flex-direction: row;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
 .justify-between{
     justify-content: space-between;
+}
+
+.align-start{
+    align-items: start;
 }
 
 .align-center{
@@ -76,6 +92,10 @@
 
 .mt-0{
     margin-top: 0;
+}
+
+.line-height-normal{
+    line-height: 1;
 }
 
 .underline-link{
