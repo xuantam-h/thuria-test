@@ -61,34 +61,33 @@ input.gdrp-checkbox {
     position: relative;
     -webkit-appearance: none;
     outline: none;
-    width: 50px;
-    height: 30px;
-    background-color: #fff;
+    cursor: pointer;
+    width: 55px;
+    height: 25px;
+    background-color: $white;
     border: 1px solid #D9DADC;
     border-radius: 50px;
-    box-shadow: inset -20px 0 0 0 #fff;
-  }
-  
-  input.gdrp-checkbox:after {
-    content: "";
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    background: transparent;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
-  }
-  
-  input.gdrp-checkbox:checked {
-    box-shadow: inset 20px 0 0 0 $secondary-color;
-    border-color: $secondary-color;
-  }
-  
-  input.gdrp-checkbox:checked:after {
-    left: 20px;
-    box-shadow: -2px 4px 3px rgba(0,0,0,0.05);
-  }
-  
+    box-shadow: inset 20px 20px 20px 20px #e3e3e3;
+
+    &:after{
+        content: "";
+        position: absolute;
+        top: 2px;
+        right:4px;
+        background: transparent;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        box-shadow: 2px 4px 3px rgba(0,0,0,0.05);
+        background-color: $white;
+    }
+
+    &:checked{
+        box-shadow: inset 20px 20px 20px 20px $secondary-color;
+        border-color: $secondary-color;
+        &:after{
+            left: 4px;
+        }
+    }
+}
   
